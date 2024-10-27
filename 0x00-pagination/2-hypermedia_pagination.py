@@ -10,9 +10,9 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     ''' return pagination parameters(start and end)
     @page: current page
     @page_size: total number of list in page '''
-    startIndex = page * page_size
-    endPage = startIndex - page_size
-    return endPage, startIndex
+    startIndex = (page - 1) * page_size
+    endPage = startIndex + page_size
+    return startIndex, endPage
 
 
 class Server:
