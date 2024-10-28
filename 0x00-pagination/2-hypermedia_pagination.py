@@ -47,7 +47,7 @@ class Server:
         ''' Page information '''
         dataPage = self.get_page(page, page_size)
         start, end = index_range(page, page_size)
-        pageTotal = math.ceil(len(self.__dataset)) / page_size
+        pageTotal = math.ceil(len(self.__dataset) / page_size)
         return {
             'page_size': len(dataPage),
             'page': page,
