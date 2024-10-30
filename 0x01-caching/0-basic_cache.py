@@ -4,12 +4,12 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-    ''' '''
+    ''' basic caching class'''
     def put(self, key, item):
         ''' fix this method to make it save data to the
         dictionary cache data from the parent class
         '''
-        if key is None or item is None:
+        if key is not None and item is not None:
             return
         self.cache_data[key] = item
 
