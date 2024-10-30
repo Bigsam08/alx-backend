@@ -10,8 +10,7 @@ class BasicCache(BaseCaching):
         dictionary cache data from the parent class
         '''
         if key is not None and item is not None:
-            return
-        self.cache_data[key] = item
+            self.cache_data[key] = item
 
     def get(self, key):
         ''' use the key to get the item-data in the cache dict '''
